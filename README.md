@@ -1,4 +1,5 @@
-print
-=====
+TODO
+====
 
-Simple printing and logging utility
+- [ ] Add logging to a file
+- [ ] Add NDEBUG flag recognition

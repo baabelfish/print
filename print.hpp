@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <ctime>
 #include <vector>
@@ -62,9 +64,11 @@ static inline std::string add0toTime(int time) {
     return (time < 10 ? "0" : "") + std::to_string(time);
 }
 
-template<typename T> inline void _ansiHelper(const T& t) {
+template<typename T>
+inline void _ansiHelper(const T& t) {
     if (t != T::None) { std::cout << "\033[" + std::to_string(static_cast<int>(t)) + 'm'; }
 }
+
 inline void _print(const Ansi& t, std::string = "", std::string = "") { _ansiHelper(t); }
 inline void _print(const Fg& t, std::string = "", std::string = "") { _ansiHelper(t); }
 inline void _print(const Bg& t, std::string = "", std::string = "") { _ansiHelper(t); }
